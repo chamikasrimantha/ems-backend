@@ -27,7 +27,7 @@ public class AttendanceEntity {
     private Date date;
 
     @Column(nullable = false)
-    private boolean isPresent; // under this there should be the time also --> 
+    private Boolean isPresent; // under this there should be the time also --> 
                                     // to check normalOverTime & doubleOverTime
 
     @Column(nullable = false)

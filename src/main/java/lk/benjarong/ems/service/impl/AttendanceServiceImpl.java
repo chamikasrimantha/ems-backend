@@ -122,7 +122,7 @@ public class AttendanceServiceImpl implements AttendanceService {
                 AttendanceEntity attendanceEntity = new AttendanceEntity();
                 attendanceEntity.setEmployee(employee);
                 attendanceEntity.setDate(dailyAttendance.getDate());
-                attendanceEntity.setPresent(dailyAttendance.isPresent());
+                attendanceEntity.setIsPresent(dailyAttendance.isPresent());
 
                 // Save the hours worked for the day, if necessary
                 attendanceEntity.setHours(dailyAttendance.getHours());

@@ -45,7 +45,7 @@ public class AttendanceUploadRequest {
 
         public static class DailyAttendance {
             private Date date;
-            private boolean isPresent;
+            private Boolean isPresent;
             private Double hours;
 
             public Double getHours() {
@@ -64,11 +64,11 @@ public class AttendanceUploadRequest {
                 this.date = date;
             }
 
-            public boolean isPresent() {
+            public Boolean isPresent() {
                 return isPresent;
             }
 
-            public void setPresent(boolean isPresent) {
+            public void setPresent(Boolean isPresent) {
                 this.isPresent = isPresent;
             }
         }
