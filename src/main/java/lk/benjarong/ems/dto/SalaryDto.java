@@ -30,5 +30,10 @@ public class SalaryDto {
     private Double twentyPresentEpf;
     private Double fiftyPresentOnBasic;
     private Double totalSalary;
+    private Double noOfDays;
+    private String sc;
+    private Double travellingAllowance;
+    private Double specialAllowance;
+    private Double serviceCharges;
     private Long employeeId;
 }

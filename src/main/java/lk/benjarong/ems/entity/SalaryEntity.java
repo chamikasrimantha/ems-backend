@@ -66,7 +66,17 @@ public class SalaryEntity {
 
     private Double fiftyPresentOnBasic; // (basicSalary + budgetaryReliefAllowance) / 2
 
-    private Double totalSalary; 
+    private Double noOfDays; // 30 - (noPayDays + leaveDays)
+
+    private String sc; // percentage
+
+    private Double travellingAllowance; // travelling allowance
+
+    private Double specialAllowance; // special allowance
+
+    private Double serviceCharges; // service charges
+
+    private Double totalSalary; // total salary = balancePay + travellingAllowance + specialAllowance + serviceCharges
 
     // many to one relationship with employee entity
     @ManyToOne

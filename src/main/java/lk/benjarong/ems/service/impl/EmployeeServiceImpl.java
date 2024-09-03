@@ -48,6 +48,9 @@ public class EmployeeServiceImpl implements EmployeeService {
             employeeEntity.setMobile(employeeDto.getMobile());
             employeeEntity.setBasicSalary(employeeDto.getBasicSalary());
             employeeEntity.setBudgetaryReliefAllowance(employeeDto.getBudgetaryReliefAllowance());
+            employeeEntity.setTravellingAllowance(employeeDto.getTravellingAllowance());
+            employeeEntity.setSpecialAllowance(employeeDto.getSpecialAllowance());
+            employeeEntity.setBank(employeeDto.getBank());
             employeeEntity.setType(EmployeeType.valueOf(employeeDto.getType().toUpperCase()));
             employeeEntity.setDepartmentEntity(departmentEntity);
             EmployeeEntity savedEmployee = employeeRepository.save(employeeEntity);
@@ -145,6 +148,9 @@ public class EmployeeServiceImpl implements EmployeeService {
             existingEmployee.setMobile(employeeDto.getMobile());
             existingEmployee.setBasicSalary(employeeDto.getBasicSalary());
             existingEmployee.setBudgetaryReliefAllowance(employeeDto.getBudgetaryReliefAllowance());
+            existingEmployee.setTravellingAllowance(employeeDto.getTravellingAllowance());
+            existingEmployee.setSpecialAllowance(employeeDto.getSpecialAllowance());
+            existingEmployee.setBank(employeeDto.getBank());
             existingEmployee.setType(EmployeeType.valueOf(employeeDto.getType().toUpperCase()));
             return employeeRepository.save(existingEmployee);
         } else {

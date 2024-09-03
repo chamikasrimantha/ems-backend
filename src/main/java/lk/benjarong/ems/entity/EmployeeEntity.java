@@ -62,6 +62,12 @@ public class EmployeeEntity {
 
     private Double budgetaryReliefAllowance; // budgetary relief allowance
 
+    private Double travellingAllowance; // travelling allowance
+ 
+    private Double specialAllowance; // special allowance
+
+    private String bank; // bank account number
+
     @Enumerated(EnumType.STRING)
     private EmployeeType type; // Probation or Permanent
 

@@ -45,7 +45,8 @@ public class SalaryServiceImpl implements SalaryService {
             salaryEntity.setDate(salaryDto.getDate());
             salaryEntity.setMonthEntity(monthEntity);
             salaryEntity.setBasicSalary(salaryDto.getBasicSalary()); // set basic salary
-            salaryEntity.setBudgetaryReliefAllowance(salaryDto.getBudgetaryReliefAllowance()); // set budgetary relief allowance
+            salaryEntity.setBudgetaryReliefAllowance(salaryDto.getBudgetaryReliefAllowance()); // set budgetary relief
+                                                                                               // allowance
             salaryEntity.setNoPay(salaryDto.getNoPay());
             salaryEntity.setTotalForEpf(salaryDto.getTotalForEpf());
             salaryEntity.setNormalOverTime(salaryDto.getNormalOverTime());
@@ -63,6 +64,11 @@ public class SalaryServiceImpl implements SalaryService {
             salaryEntity.setTwentyPresentEpf(salaryDto.getTwentyPresentEpf());
             salaryEntity.setFiftyPresentOnBasic(salaryDto.getFiftyPresentOnBasic());
             salaryEntity.setTotalSalary(salaryDto.getTotalSalary());
+            salaryEntity.setNoOfDays(salaryDto.getNoOfDays());
+            salaryEntity.setSc(salaryDto.getSc());
+            salaryEntity.setTravellingAllowance(salaryDto.getTravellingAllowance());
+            salaryEntity.setSpecialAllowance(salaryDto.getSpecialAllowance());
+            salaryEntity.setServiceCharges(salaryDto.getServiceCharges());
             salaryEntity.setEmployeeEntity(employeeEntity);
             return salaryRepository.save(salaryEntity);
         } else {
@@ -73,7 +79,7 @@ public class SalaryServiceImpl implements SalaryService {
     @Override
     public SalaryEntity updateSalary(Long id, SalaryDto salaryDto) {
         SalaryEntity existingSalary = salaryRepository.findById(id).orElse(null);
-        if (existingSalary!=null) {
+        if (existingSalary != null) {
             existingSalary.setDate(salaryDto.getDate());
             existingSalary.setBasicSalary(salaryDto.getBasicSalary()); // equals employeeEntity?.basicSalary
             existingSalary.setBudgetaryReliefAllowance(salaryDto.getBudgetaryReliefAllowance());
@@ -94,6 +100,11 @@ public class SalaryServiceImpl implements SalaryService {
             existingSalary.setTwentyPresentEpf(salaryDto.getTwentyPresentEpf());
             existingSalary.setFiftyPresentOnBasic(salaryDto.getFiftyPresentOnBasic());
             existingSalary.setTotalSalary(salaryDto.getTotalSalary());
+            existingSalary.setNoOfDays(salaryDto.getNoOfDays());
+            existingSalary.setSc(salaryDto.getSc());
+            existingSalary.setTravellingAllowance(salaryDto.getTravellingAllowance());
+            existingSalary.setSpecialAllowance(salaryDto.getSpecialAllowance());
+            existingSalary.setServiceCharges(salaryDto.getServiceCharges());
             return salaryRepository.save(existingSalary);
         } else {
             return null;
@@ -103,7 +114,7 @@ public class SalaryServiceImpl implements SalaryService {
     @Override
     public List<SalaryEntity> getSalariesByEmployee(Long id) {
         EmployeeEntity employeeEntity = employeeRepository.findById(id).orElse(null);
-        if (employeeEntity!=null) {
+        if (employeeEntity != null) {
             return salaryRepository.findSalariesByEmployee(employeeEntity);
         } else {
             return null;
@@ -113,7 +124,7 @@ public class SalaryServiceImpl implements SalaryService {
     @Override
     public List<SalaryEntity> getSalariesByMonth(Long id) {
         MonthEntity monthEntity = monthRepository.findById(id).orElse(null);
-        if (monthEntity!=null) {
+        if (monthEntity != null) {
             return salaryRepository.findSalariesByMonth(monthEntity);
         } else {
             return null;
@@ -123,7 +134,7 @@ public class SalaryServiceImpl implements SalaryService {
     @Override
     public SalaryEntity deleteSalary(Long id) {
         SalaryEntity salaryEntity = salaryRepository.findById(id).orElse(null);
-        if (salaryEntity!=null) {
+        if (salaryEntity != null) {
             salaryRepository.delete(salaryEntity);
             return salaryEntity;
         } else {

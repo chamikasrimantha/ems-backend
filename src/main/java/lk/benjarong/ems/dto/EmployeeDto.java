@@ -22,6 +22,9 @@ public class EmployeeDto {
     private String mobile;
     private Double basicSalary;
     private Double budgetaryReliefAllowance;
+    private Double travellingAllowance;
+    private Double specialAllowance;
+    private String bank;
     private String type;
     private Long departmentId;
 }
