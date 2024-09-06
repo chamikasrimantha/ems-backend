@@ -86,7 +86,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                 + "<li><strong>Designation:</strong> " + employee.getDesignation() + "</li>"
                 + "<li><strong>Department:</strong> " + employee.getDepartmentEntity().getName() + "</li>"
                 + "<li><strong>Basic salary:</strong> " + employee.getBasicSalary() + "</li>"
-                + "<li><strong>Budgetary Relief Allowance:</strong> " + employee.getBudgetaryReliefAllowance() + "</li>"
+                + "<li><strong>Special Allowance:</strong> " + employee.getSpecialAllowance() + "</li>"
                 + "<li><strong>EPF Number:</strong> " + employee.getEpf() + "</li>"
                 + "</ul>"
                 + "<p>We look forward to your contribution to the team.</p>"
