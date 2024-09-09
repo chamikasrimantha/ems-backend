@@ -66,6 +66,8 @@ public class EmployeeEntity {
  
     private Double specialAllowance; // special allowance
 
+    private String bankname; // bank name
+
     private String bank; // bank account number
 
     @Enumerated(EnumType.STRING)

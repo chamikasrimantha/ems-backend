@@ -24,6 +24,7 @@ public class EmployeeDto {
     private Double budgetaryReliefAllowance;
     private Double travellingAllowance;
     private Double specialAllowance;
+    private String bankname;
     private String bank;
     private String type;
     private Long departmentId;
