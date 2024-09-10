@@ -1,5 +1,6 @@
 package lk.benjarong.ems.entity;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 import java.util.List;
 
@@ -58,13 +59,13 @@ public class EmployeeEntity {
 
     private String mobile;
 
-    private Double basicSalary; // basic salary
+    private BigDecimal basicSalary; // basic salary
 
-    private Double budgetaryReliefAllowance; // budgetary relief allowance
+    private BigDecimal budgetaryReliefAllowance; // budgetary relief allowance
 
-    private Double travellingAllowance; // travelling allowance
+    private BigDecimal travellingAllowance; // travelling allowance
  
-    private Double specialAllowance; // special allowance
+    private BigDecimal specialAllowance; // special allowance
 
     private String bankname; // bank name
 

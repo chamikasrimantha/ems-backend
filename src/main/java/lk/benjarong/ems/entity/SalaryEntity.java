@@ -1,5 +1,6 @@
 package lk.benjarong.ems.entity;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 
 import jakarta.persistence.Column;
@@ -30,53 +31,53 @@ public class SalaryEntity {
 
     // private Month month;
     
-    private Double basicSalary; // basic salary == employeeEntity?.basicSalary
+    private BigDecimal basicSalary; // basic salary == employeeEntity?.basicSalary
 
-    private Double budgetaryReliefAllowance;  // budgetary relief allowance == employeeEntity?.budgetaryReliefAllowance
+    private BigDecimal budgetaryReliefAllowance;  // budgetary relief allowance == employeeEntity?.budgetaryReliefAllowance
 
-    private Double noPay; // noPay === ((basicSalary + budgetaryReliefAllowance) / 30) * 2
+    private BigDecimal noPay; // noPay === ((basicSalary + budgetaryReliefAllowance) / 30) * 2
 
-    private Double totalForEpf; // totalForEpf == (basicSalary + budgetaryReliefAllowance) - noPay
+    private BigDecimal totalForEpf; // totalForEpf == (basicSalary + budgetaryReliefAllowance) - noPay
 
-    private Double normalOverTime; // normalOT == if OT hours >= 24 then == ((grossSalary / 240) * 24 hrs) * 1.5
+    private BigDecimal normalOverTime; // normalOT == if OT hours >= 24 then == ((grossSalary / 240) * 24 hrs) * 1.5
 
-    private Double doubleOverTime; // double OT == if worked in holidays then == ((grossSalary / 240) * 8 hrs) * 2
+    private BigDecimal doubleOverTime; // double OT == if worked in holidays then == ((grossSalary / 240) * 8 hrs) * 2
 
-    private Double grossSalary; // gross salary == (basicSalary + budgetaryReliefAllowance) - noPay
+    private BigDecimal grossSalary; // gross salary == (basicSalary + budgetaryReliefAllowance) - noPay
 
-    private Double eightPresentEpf; // 8% epf
+    private BigDecimal eightPresentEpf; // 8% epf
 
-    private Double cashFloat; // manually
+    private BigDecimal cashFloat; // manually
 
-    private Double staffLoan; // manually
+    private BigDecimal staffLoan; // manually
 
-    private Double staffDebtors; // manually
+    private BigDecimal staffDebtors; // manually
 
-    private Double salaryAdvance; // manually
+    private BigDecimal salaryAdvance; // manually
 
-    private Double totalDetuction; // totalDetuction == 8% epf + cashFloat + staffLoan + staffDebtors + salaryAdvance
+    private BigDecimal totalDetuction; // totalDetuction == 8% epf + cashFloat + staffLoan + staffDebtors + salaryAdvance
 
-    private Double balancePay; // balancePay == grossSalary - totalDetuction
+    private BigDecimal balancePay; // balancePay == grossSalary - totalDetuction
 
-    private Double twelvePresentEpf; // 12% epf
+    private BigDecimal twelvePresentEpf; // 12% epf
 
-    private Double threePresentEtf; // 3% etf
+    private BigDecimal threePresentEtf; // 3% etf
 
-    private Double twentyPresentEpf; // 20% epf
+    private BigDecimal twentyPresentEpf; // 20% epf
 
-    private Double fiftyPresentOnBasic; // (basicSalary + budgetaryReliefAllowance) / 2
+    private BigDecimal fiftyPresentOnBasic; // (basicSalary + budgetaryReliefAllowance) / 2
 
-    private Double noOfDays; // 30 - (noPayDays + leaveDays)
+    private BigDecimal noOfDays; // 30 - (noPayDays + leaveDays)
 
     private String sc; // percentage
 
-    private Double travellingAllowance; // travelling allowance
+    private BigDecimal travellingAllowance; // travelling allowance
 
-    private Double specialAllowance; // special allowance
+    private BigDecimal specialAllowance; // special allowance
 
-    private Double serviceCharges; // service charges
+    private BigDecimal serviceCharges; // service charges
 
-    private Double totalSalary; // total salary = balancePay + travellingAllowance + specialAllowance + serviceCharges
+    private BigDecimal totalSalary; // total salary = balancePay + travellingAllowance + specialAllowance + serviceCharges
 
     // many to one relationship with employee entity
     @ManyToOne

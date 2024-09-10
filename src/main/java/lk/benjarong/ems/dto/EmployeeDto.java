@@ -1,5 +1,6 @@
 package lk.benjarong.ems.dto;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 
 import lombok.Getter;
@@ -20,10 +21,10 @@ public class EmployeeDto {
     private Date wef;
     private String designation;
     private String mobile;
-    private Double basicSalary;
-    private Double budgetaryReliefAllowance;
-    private Double travellingAllowance;
-    private Double specialAllowance;
+    private BigDecimal basicSalary;
+    private BigDecimal budgetaryReliefAllowance;
+    private BigDecimal travellingAllowance;
+    private BigDecimal specialAllowance;
     private String bankname;
     private String bank;
     private String type;
