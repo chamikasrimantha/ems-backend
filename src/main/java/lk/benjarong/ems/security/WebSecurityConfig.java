@@ -71,8 +71,8 @@ public class WebSecurityConfig {
                         .permitAll()
                         .requestMatchers("/auth/superadmin/**").hasRole("SUPERADMIN")
                         .requestMatchers("/auth/admin/**").hasRole("ADMIN")
-                        .anyRequest().authenticated());
-                        // .anyRequest().permitAll());
+                        // .anyRequest().authenticated());
+                        .anyRequest().permitAll());
         http.authenticationProvider(authenticationProvider());
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
         return http.build();
