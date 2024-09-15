@@ -22,7 +22,7 @@ jobs:
           # SSH into the EC2 instance and deploy the application
           ssh -o StrictHostKeyChecking=no -i ec2-key.pem ec2-user@13.60.229.72 << 'EOF'
             # Navigate to your app folder
-            cd /home/ec2-user/springbootapp
+            cd /home/ec2-user/ems-backend
 
             # Pull the latest changes from GitHub
             git pull origin main
@@ -34,7 +34,7 @@ jobs:
             pkill -f 'java -jar' || true
 
             # Run the new JAR
-            nohup java -jar target/your-spring-boot-app.jar > app.log 2>&1 &
+            nohup java -jar target/ems-0.0.1-SNAPSHOT.jar > app.log 2>&1 &
 
             # Exit the SSH session
             exit
