@@ -39,8 +39,3 @@ jobs:
             # Exit the SSH session
             exit
           EOF
-
-    # Clean up the PEM file after deployment
-    post:
-      - name: Remove PEM file
-        run: rm -f ec2-key.pem
