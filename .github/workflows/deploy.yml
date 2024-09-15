@@ -39,3 +39,6 @@ jobs:
             # Exit the SSH session
             exit
           EOF
+           # Clean up the PEM file after deployment
+
+
