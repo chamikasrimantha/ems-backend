@@ -74,7 +74,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         MimeMessageHelper helper = new MimeMessageHelper(message, true, "UTF-8");
 
         helper.setTo(employee.getEmail()); // Assuming you have an email field in EmployeeEntity
-        helper.setSubject("Testing Mail || Welcome to the Company");
+        helper.setSubject("Welcome to the Company");
 
         String content = "<div style='font-family: Arial, sans-serif; color: #333;'>"
                 + "<h2 style='color: #007BFF;'>Welcome to the Team, " + employee.getFirstname() + "!</h2>"
@@ -87,10 +87,12 @@ public class EmployeeServiceImpl implements EmployeeService {
                 + "<li><strong>Designation:</strong> " + employee.getDesignation() + "</li>"
                 + "<li><strong>Department:</strong> " + employee.getDepartmentEntity().getName() + "</li>"
                 + "<li><strong>Basic salary:</strong> " + employee.getBasicSalary() + "</li>"
+                + "<li><strong>Budgetary Relief Allowance:</strong> " + employee.getBudgetaryReliefAllowance() + "</li>"
                 + "<li><strong>Special Allowance:</strong> " + employee.getSpecialAllowance() + "</li>"
+                + "<li><strong>Travelling Allowance:</strong> " + employee.getTravellingAllowance() + "</li>"
                 + "<li><strong>EPF Number:</strong> " + employee.getEpf() + "</li>"
                 + "</ul>"
-                + "<p>We look forward to your contribution to the team.</p>"
+                + "<p>We look forward to your contribution to the company.</p>"
                 + "<p style='color: #007BFF;'>Best regards,<br>Human Resources</p>"
                 + "<hr style='border: none; border-top: 1px solid #007BFF;'/>"
                 + "<p style='font-size: 12px; color: #777;'>This is an automated message. Please do not reply.</p>"
