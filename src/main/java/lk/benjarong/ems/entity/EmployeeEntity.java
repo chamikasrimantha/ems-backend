@@ -84,4 +84,8 @@ public class EmployeeEntity {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "employeeEntity", cascade = CascadeType.ALL)
     private List<SalaryEntity> salaries;
 
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "employee", cascade = CascadeType.ALL)
+    private List<AttendanceEntity> attendances;
+
 }
